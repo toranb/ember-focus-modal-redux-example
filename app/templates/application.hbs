@@ -1,0 +1,8 @@
+{{#ui-layout as |username password modal toggleModal updateUsername updatePassword|}}
+  {{#ui-login}}
+    {{ui-input value=username update=updateUsername}}
+    {{ui-input value=password update=updatePassword modal=modal}}
+    {{ui-btn text="show modal" clicked=toggleModal}}
+  {{/ui-login}}
+  {{ui-modal visible=modal clicked=toggleModal}}
+{{/ui-layout}}
